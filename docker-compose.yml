@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  backend: 
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      container_name: spring-boot-backend
+      environment:
+        - SPRING_PROFILES_ACTIVE=dev
+      volumes:
+        - ./backend/pitch-dev-db.db:app/pitch-dev-db.db
+      ports:
+        - "8080:8080"

@@ -12,4 +12,4 @@ Start the Docker desktop application and ensure it is running.
 
 ## Running the application via Docker
 - Run `docker run --rm -p 8080:8080 pitch-backend-image`
-- The backend application will be ran on localhost:8080 - [Here](localhost:8080)
+- The backend application will be ran on localhost:8080 - [Here](http://localhost:8080)

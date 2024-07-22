@@ -19,20 +19,20 @@ import com.google.firebase.FirebaseOptions;
 public class BackendApplication {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws IOException {
-		// ClassPathResource resource = new ClassPathResource("serviceAccountKey.json");
+		ClassPathResource resource = new ClassPathResource("serviceAccountKey.json");
 
-		// try (InputStream serviceAccountStream = resource.getInputStream()) {
+		try (InputStream serviceAccountStream = resource.getInputStream()) {
 			
-		// 	FirebaseOptions options = new FirebaseOptions.Builder()
-		// 		.setCredentials(GoogleCredentials.fromStream(serviceAccountStream))
-		// 		.build();
-		// 	FirebaseApp.initializeApp(options);
-		// } 
-		// catch (IOException e) {
-		// 	// Handle IOException appropriately (e.g., log the error and exit)
-		// 	e.printStackTrace();
-		// 	System.exit(-1);
-		// }
+			FirebaseOptions options = new FirebaseOptions.Builder()
+				.setCredentials(GoogleCredentials.fromStream(serviceAccountStream))
+				.build();
+			FirebaseApp.initializeApp(options);
+		} 
+		catch (IOException e) {
+			// Handle IOException appropriately (e.g., log the error and exit)
+			e.printStackTrace();
+			System.exit(-1);
+		}
 		SpringApplication.run(BackendApplication.class, args);
 	}
 

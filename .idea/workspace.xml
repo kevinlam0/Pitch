@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b913221e-168d-4fa0-9f0e-006b3d55d2c0" name="Changes" comment="Updated dependencies and gitignore">
-      <change afterPath="$PROJECT_DIR$/pitch-backend/src/main/java/com/example/pitch_backend/FirebaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pitch-backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pitch-backend/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="b913221e-168d-4fa0-9f0e-006b3d55d2c0" name="Changes" comment="Updated dependencies and gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +67,7 @@
       <updated>1720655546089</updated>
       <workItem from="1720655549705" duration="1710000" />
       <workItem from="1720657279470" duration="863000" />
+      <workItem from="1721492773273" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="Initialized Java Backend">
       <created>1720656110789</created>

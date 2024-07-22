@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+serviceAccountKey.json
+firebase-creds.json
+
 ### STS ###
 .apt_generated
 .classpath

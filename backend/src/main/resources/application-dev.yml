@@ -1,13 +1,13 @@
-spring:
-    datasource:
-        url: jdbc:sqlite:pitch-dev-db.db
-        driver-class-name: org.sqlite.JDBC
-    jpa:
-        database-platform: org.hibernate.dialect.SQLiteDialect
-        hibernate:
-            ddl-auto: update
-firebase:
-    auth:
-        emulator:
-            host: localhost
-            port: 9099
+# spring:
+#     datasource:
+#         url: jdbc:sqlite:pitch-dev-db.db
+#         driver-class-name: org.sqlite.JDBC
+#     jpa:
+#         database-platform: org.hibernate.dialect.SQLiteDialect
+#         hibernate:
+#             ddl-auto: update
+# firebase:
+#     auth:
+#         emulator:
+#             host: localhost
+#             port: 9099

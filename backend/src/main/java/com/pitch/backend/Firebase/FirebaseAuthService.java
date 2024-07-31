@@ -1,4 +1,4 @@
-package com.example.pitch_backend.Firebase;
+package com.pitch.backend.Firebase;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseToken;

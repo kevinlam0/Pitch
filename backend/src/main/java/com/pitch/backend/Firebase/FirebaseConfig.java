@@ -1,4 +1,4 @@
-package com.example.pitch_backend.Firebase;
+package com.pitch.backend.Firebase;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;

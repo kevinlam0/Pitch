@@ -8,12 +8,10 @@ import com.pitch.backend.Firebase.FirestoreService;
 @RestController
 public class FirebaseController {
     private final FirestoreService firestoreService;
-    // private final FirebaseAuthService firebaseAuthService;
+    private final FirebaseAuthService firebaseAuthService;
 
-    public FirebaseController() {
-        // this.firestoreService = new FirestoreService();
-        // this.firebaseAuthService = new FirebaseAuthService();
-        // this.firebaseAuthService = null;
-        this.firestoreService = null;
+    public FirebaseController(FirebaseAuthService firebaseAuthService, FirestoreService firestoreService) {
+        this.firestoreService = firestoreService;
+        this.firebaseAuthService = firebaseAuthService;
     }
 }

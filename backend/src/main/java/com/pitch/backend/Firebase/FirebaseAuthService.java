@@ -6,6 +6,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FirebaseAuthService {
+    
+    public FirebaseAuthService() {
+
+    }
     public FirebaseToken verifyIdToken(String idToken) throws Exception {
         return FirebaseAuth.getInstance().verifyIdToken(idToken);
     }

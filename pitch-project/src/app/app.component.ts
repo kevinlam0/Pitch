@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { RegisterScreen1Component } from './register-screen-1/register-screen-1.component';
 import { CommonModule } from '@angular/common';
-import { HomeScreenComponent } from './home-screen/home-screen.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeScreenComponent, CommonModule],
+  imports: [RouterOutlet, RegisterScreen1Component, CommonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'pitch-project';

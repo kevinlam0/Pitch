@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="quote-section">
+    <div class="quote-content">
+      <div class="quote-text">"Make sure you pick good people to build your business with, as they'll determine 80 percent of your success."</div>
+      <div class="quote-author">-Barbara Corcoran</div>
+    </div>
+  </div>
+  <div class="form-section">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <h2>Let's Get Started!</h2>
+      <label for="firstName">First Name</label>
+      <input id="firstName" formControlName="firstName" type="text" />
+      <label for="lastName">Last Name</label>
+      <input id="lastName" formControlName="lastName" type="text" />
+      <label for="email">Email Address</label>
+      <input id="email" formControlName="email" type="email" />
+      <label for="password">Password</label>
+      <input id="password" formControlName="password" type="password" />
+      <label for="confirmPassword">Confirm Password</label>
+      <input id="confirmPassword" formControlName="confirmPassword" type="password" />
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</div>

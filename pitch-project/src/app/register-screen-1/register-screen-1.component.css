@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Ensures both sections stretch to full height */
+  height: 100vh;
+  position: relative; /* Allows for stacking context */
+}
+
+
+
+.quote-section {
+  font-size: 30px;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to bottom, #18392B, #066839);
+  color: white;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 60px;
+  text-align: left;
+  position: relative; /* Ensures stacking context */
+  z-index: 1; /* Lower z-index */
+}
+
+.quote-content {
+  display: flex;
+  flex-direction: column; /* Stack quote and author vertically */
+  width: 100%; /* Full width of the quote-section */
+  position: relative; /* For positioning the author */
+}
+
+.quote-text {
+  margin-bottom: 10px; /* Space between quote and author */
+}
+
+.quote-author {
+  align-self: flex-end; /* Align author to the right within the container */
+}
+
+
+.form-section {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -10px 0px 10px -5px rgba(0, 0, 0, 0.7); /* Left-side shadow */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensures stacking context */
+  z-index: 2; /* Higher z-index to appear above quote-section */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+label {
+  margin: 10px 0 5px;
+  padding-left: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #118A52;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2d4f34;
+}

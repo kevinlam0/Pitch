@@ -1,4 +1,4 @@
-package com.pitch.backend.Firebase;
+package com.pitch.backend.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;

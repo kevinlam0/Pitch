@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.postgresql.util.PSQLException;
 
 @RestController
 public class UserController {
@@ -13,10 +14,11 @@ public class UserController {
     
     @GetMapping("/")
     public String hello() {
-        if (dbService.createUser("Kevin", "Lam", "mvk2uy@virginia.edu", "5408151796")) {
+        try {
+            dbService.createUser("Kevin", "Lam", "mvk2uy@virginia.edu", "5408151796");
             return "User created";
-        }
-        else {
+        } 
+        catch (RuntimeException e) {
             return "User not created";
         }
     }

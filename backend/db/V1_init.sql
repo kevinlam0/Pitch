@@ -1,29 +1,34 @@
 CREATE TABLE IF NOT EXISTS 'user' (
     'id' SERIAL PRIMARY KEY,
-    'firebase_id' VARCHAR(255) NULL,
+    -- 'firebase_id' VARCHAR(255) NULL, 
     'first_name' VARCHAR(255) NULL,
     'last_name' VARCHAR(255) NULL,
     'email' VARCHAR(255) NULL,
     'phone' VARCHAR(255) NULL,
-    'timestamp' TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    'create_at' TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 );
 CREATE TABLE IF NOT EXISTS 'investor_profile' (
     'id' SERIAL PRIMARY KEY,
     'user_id' INT NULL REFERENCES 'user'('id'),
     'company_name' VARCHAR(255) NULL,
-    'investment_min' INT NULL,
-    'investment_max' INT NULL,
     'post_id' INT NULL REFERENCES 'investor_post'('id'),
     'location' VARCHAR(255) NULL,
-    'investor_type' VARCHAR(10) NOT NULL CHECK (investor_type IN ('person', 'company')),
+    'is_company' BOOLEAN NOT NULL,
+    'social_media_links' JSONB NULL,
+    'create_at' TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS 'investor_post' (
     'id' SERIAL PRIMARY KEY,
-    'bio' TEXT NULL,
+    'description' TEXT NOT NULL,
+    'investor_id' INT NULL REFERENCES 'investor_profile'('id'),
+    'interests' JSONB NULL,
+    'investment_min' INT NULL,
+    'investment_max' INT NULL,
     'timestamp' TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     'investment_type' VARCHAR(255) NULL CHECK (investment_type IN ('equity', 'debt', 'grant', 'other')),
     'other_offers' TEXT NULL,
+    'create_at' TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS 'business_profile' (
@@ -35,6 +40,9 @@ CREATE TABLE IF NOT EXISTS 'business_profile' (
     'description' TEXT NOT NULL,
     'date_founded' DATE NOT NULL,
     'mission_statement' TEXT NULL,
+    'description' TEXT NULL,
+    'social_media_links' JSONB NULL,
+    'create_at' TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS 'social_media' (
@@ -55,6 +63,7 @@ CREATE TABLE IF NOT EXISTS 'business_post' (
     'debt_offered' INT NULL,
     'grant_offered' INT NULL,
     'other_offers' TEXT NULL,
+    'create_at' TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS 'finance' (
@@ -66,4 +75,11 @@ CREATE TABLE IF NOT EXISTS 'finance' (
     'total_liabilities' INT NULL,
     'total_equity' INT NULL,
     'timestamp' TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+);
+
+CREATE TABLE IF NOT EXISTS 'matches' (
+    'id' SERIAL PRIMARY KEY,
+    'investor_id' INT NOT NULL REFERENCES 'investor_profile'('id'),
+    BusinessID INT NOT NULL REFERENCES 'business_profile'('id'),
+    MatchedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

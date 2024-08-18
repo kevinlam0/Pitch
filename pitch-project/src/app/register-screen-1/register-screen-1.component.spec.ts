@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-home-screen',
-  templateUrl: './home-screen.component.html',
-  styleUrls: ['./home-screen.component.css']
+  selector: 'app-register-screen-1',
+  templateUrl: './register-screen-1.component.html',
+  styleUrls: ['./register-screen-1.component.css']
 })
 export class HomeScreenComponent {
 

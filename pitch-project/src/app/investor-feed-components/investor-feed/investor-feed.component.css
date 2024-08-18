@@ -1,0 +1,36 @@
+.investor-section {
+    position: relative;
+    background-image: url('assets/cybertruck.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .investor-section video, .investor-section audio {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+  }
+  
+  .investor-section .content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .investor-section .content h1 {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  
+  .investor-section .content p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+  

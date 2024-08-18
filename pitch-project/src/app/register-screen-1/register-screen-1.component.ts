@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-home-screen',
+  selector: 'app-register-screen-1',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './register-screen-1.component.html',

@@ -1,0 +1,28 @@
+.controls {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #006839;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .controls button:hover {
+    background-color: #004c2f;
+  }
+  
+  .controls .save {
+    background-color: #999;
+  }
+  
+  .controls .save:hover {
+    background-color: #777;
+  }
+  

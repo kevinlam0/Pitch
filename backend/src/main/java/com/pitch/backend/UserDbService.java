@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.postgresql.util.PSQLException;
 
 @Service
-class DbService {
+class UserDbService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

@@ -10,12 +10,12 @@ import org.postgresql.util.PSQLException;
 public class UserController {
 
     @Autowired
-    private DbService dbService;
+    private UserDbService userService;
     
     @GetMapping("/")
     public String hello() {
         try {
-            dbService.createUser("Kevin", "Lam", "mvk2uy@virginia.edu", "5408151796");
+            userService.createUser("Kevin", "Lam", "mvk2uy@virginia.edu", "5408151796");
             return "User created";
         } 
         catch (RuntimeException e) {

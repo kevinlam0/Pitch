@@ -1,33 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: top 0.3s;
-  }
-  
-  .header.hidden {
-    top: -100px; /* Move header out of view */
-  }
-  
-  .header .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-  }
-  
-  .header nav {
-    float: right;
-  }
-  
-  .header nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: top 0.3s;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%; /* Prevent overflow */
+  padding: 0 20px; /* Add some padding to ensure content stays within screen */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  flex: 0 0 auto;
+}
+
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-right: -160px;
+  gap: 30px;
+}
+
+.nav-center a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgba(10, 92, 54, 0.6); /* #0A5C3699 at 60% opacity */
+  font-weight: 500;
+  font-family: 'Koulen', sans-serif;
+  font-size: 20px;
+}
+
+.spacer {
+  flex: 0 0 auto;
+}
+
+.search-bar-container {
+  flex-shrink: 0; /* Prevent the search bar from shrinking */
+  max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+
+.search-bar {
+  width: 200px; /* Adjust width as necessary */
+  padding: 8px 12px;
+  border-radius: 50px;
+  border: 1px solid #0A5C36;
+  font-size: 16px;
+  outline: none;
+  background-image: url('assets/search-icon.png');
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  background-size: 20px; /* Adjust the size of the background image */
+  padding-left: 35px; /* Space for the search icon */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+
+.search-bar::placeholder {
+  color: #aaa; /* Placeholder text color */
+}
+
